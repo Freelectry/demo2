@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo python threadedclient.py 6700 eth0
+sudo python /home/pi/threadedclient.py 6700 eth0

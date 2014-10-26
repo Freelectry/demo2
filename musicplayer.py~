@@ -12,7 +12,7 @@ class MusicPlayer:
     def __init__(self):
         pygame.init()
         self.done = False
-        pygame.mixer.music.load('1.mp3')
+        pygame.mixer.music.load('/home/pi/1.mp3')
         pygame.mixer.music.set_endevent(pygame.constants.USEREVENT)
  
     def play(self):
@@ -23,5 +23,5 @@ class MusicPlayer:
                 if event.type == pygame.QUIT: # If user clicked close
                     self.done = True # Flag that we are done so we exit this loop
                 elif event.type == pygame.constants.USEREVENT:
-                    pygame.mixer.music.load('1.mp3')
+                    pygame.mixer.music.load('/home/pi/1.mp3')
                     pygame.mixer.music.play()

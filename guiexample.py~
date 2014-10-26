@@ -18,7 +18,7 @@ class Example(Frame):
         self.queue = queue
         self.musicplayer = musicplayer
         self.endCommand = endCommand
-        self.pictures = ["hd_1.jpg", "hd_2.jpg", "hd_3.jpg", "hd_4.jpg", "hd_5.jpg"];
+        self.pictures = ["/home/pi/hd_1.jpg", "/home/pi/hd_2.jpg", "/home/pi/hd_3.jpg"];
         self.centerWindow()
         self.initUI()
         self.showPic = 1
@@ -29,7 +29,7 @@ class Example(Frame):
         '''
     
     def initUI(self):
-        self.parent.title("Example")
+        self.parent.title("Mystery Room")
         self.pack(fill=BOTH, expand = 1)
 
         self.style = Style()
@@ -45,7 +45,7 @@ class Example(Frame):
         #quitButton.place(x = self.width - 100, y = self.height - 100)
        
         scale = 0.75
-        self.wow_pic = Image.open("hd_1.jpg")
+        self.wow_pic = Image.open("/home/pi/hd_1.jpg")
         self.wow_pic = self.wow_pic.resize((self.width, self.height))
         self.wow_pic_tk = ImageTk.PhotoImage(self.wow_pic)
         self.label_wow_pic = Label(self, image = self.wow_pic_tk)

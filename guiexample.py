@@ -18,7 +18,7 @@ class Example(Frame):
         self.queue = queue
         self.musicplayer = musicplayer
         self.endCommand = endCommand
-        self.pictures = ["/home/pi/hd_1.jpg", "/home/pi/hd_2.jpg", "/home/pi/hd_3.jpg"];
+        self.pictures = ["/home/pi/demo2/hd_1.jpg", "/home/pi/demo2/hd_2.jpg", "/home/pi/demo2/hd_3.jpg"];
         self.centerWindow()
         self.initUI()
         self.showPic = 1
@@ -45,7 +45,7 @@ class Example(Frame):
         #quitButton.place(x = self.width - 100, y = self.height - 100)
        
         scale = 0.75
-        self.wow_pic = Image.open("/home/pi/hd_1.jpg")
+        self.wow_pic = Image.open("/home/pi/demo2/hd_1.jpg")
         self.wow_pic = self.wow_pic.resize((self.width, self.height))
         self.wow_pic_tk = ImageTk.PhotoImage(self.wow_pic)
         self.label_wow_pic = Label(self, image = self.wow_pic_tk)
@@ -81,7 +81,7 @@ class Example(Frame):
 
     def playMusic(self):
         pygame.mixer.init()
-        pygame.mixer.music.load("1.mp3")
+        pygame.mixer.music.load("/home/pi/demo2/1.mp3")
         pygame.mixer.music.play()
 
     def pauseMusic(self):
